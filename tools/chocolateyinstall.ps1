@@ -1,5 +1,5 @@
 ﻿$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://static.infomaniak.ch/photofiltre/utils/pf7/pf7-setup-en-7.2.1.exe' # download url, HTTPS preferred
+$url        = 'https://static.infomaniak.ch/photofiltre/utils/pf7/pf7-setup-en-7.2.1.exe' # download url, HTTPS preferred
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
@@ -8,6 +8,8 @@ $packageArgs = @{
   softwareName  = 'photofiltre7-en*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
   silentArgs   = '/S'
   validExitCodes= @(0)
+  checksum = '50B1F49A475AC83FCFDE2D08C4A547F8'
+  checksumType = 'md5'
 }
  
 Install-ChocolateyPackage @packageArgs
