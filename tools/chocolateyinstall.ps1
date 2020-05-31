@@ -5,11 +5,10 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'EXE'
   url           = $url
-  softwareName  = 'photofiltre7-en*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
+  softwareName  = 'photofiltre7-en*'
   silentArgs   = '/S'
   validExitCodes= @(0)
-  checksum = '50B1F49A475AC83FCFDE2D08C4A547F8'
-  checksumType = 'md5'
-}
- 
+  checksum = 'B20523A0A26FE2FE2A9A623E75C57C9CFA1C524A7C197CC7E05460AE8C8EE5E7'
+  checksumType = 'sha256'
+} 
 Install-ChocolateyPackage @packageArgs
